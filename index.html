@@ -1,16 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-    <title>LESS Demo</title>
-      <link rel="stylesheet" href="./dist/compile.css">
-      </head>
-      <body>
-        <p><a href="https://spa.wangding.in">SPA 富应用开发课程资料</a></p>
-          <div class="slightly-rounded">slightly-rounded div</div>
-            <div class="very-rounded">
-                  <blockquote>本电子书含 SPA 富应用开发课程的全部教学资料，包括：课程大纲、学习交流 QQ 群、课程视频、幻灯片、通关任务以及示例代码。</blockquote>
-                    </div>
-                    </body>
-                    </html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>矩形计算器</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+  <body>
+      <div class="outer">
+        <label for="wid">宽度：</label>
+      <input type="text" id="width" autofocus   onblur="Wcheck()"/><span>*</span>
+      <br>
+      <div id="werror" >
+          <span id="werrortext"></span> 
+      </div>
+      <label for="hei">高度：</label>
+      <input type="text" id="height" onblur="Hcheck()" /><span>*</span>
+      <br>
+      <div id="herror" >
+          <span id="herrortext"></span> 
+      </div>
+      <input type="button" value="计算" onclick="calc()" id="btn"/>
+      <br />
+      <label for="perimeter">周长：</label>
+      <input type="text" id="perimeter" disabled />
+      <br>
+      <label for="area">面积：</label>
+      <input type="text" id="area" disabled />
+      </div>
+    <script src="calc.js">
+    </script>
+  </body>
+</html>
 
